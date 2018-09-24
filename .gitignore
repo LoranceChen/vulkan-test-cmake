@@ -1,0 +1,28 @@
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+install_manifest.txt
+compile_commands.json
+
+TutorialConfig.h
+
+# general auto gen
+.idea
+*.a
+*.cmake
+cmake-build-debug
+*.cbp
+
+# executor
+cmake_learning
+
+# cpack
+_CPack_Packages
+## use `!` to exclude needed `.sh` file
+*.sh
+*.gz
+*.tar.Z
+*.tar.bz2
+*.tar.xz
