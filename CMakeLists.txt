@@ -1,10 +1,13 @@
 cmake_minimum_required(VERSION 3.10)
 project(valkan_test)
 
-set(CMAKE_CXX_STANDARD 11)
+#set(CMAKE_CXX_STANDARD 17)
 
 
 add_executable(valkan_test main.cpp)
+
+#set_property(TARGET valkan_test PROPERTY CXX_STANDARD 17)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1z")
 
 target_include_directories(valkan_test
         PUBLIC
@@ -26,3 +29,7 @@ target_link_libraries(valkan_test
 #        libvulkan.1.1.82.dylib
 #        libvulkan.1.dylib
         )
+
+include_directories ("${PROJECT_SOURCE_DIR}/mylib")
+add_subdirectory (mylib)
+target_link_libraries(valkan_test mylib)
