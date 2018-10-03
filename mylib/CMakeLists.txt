@@ -1,1 +1,2 @@
-add_library(mylib optional.h optional.cpp)
+# add_library must include at least one cpp file
+add_library(mylib optional.hpp _optional.cpp)
