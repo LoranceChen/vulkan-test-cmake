@@ -8,12 +8,12 @@
 template <class T>
 class optional {
 private:
-    T value;
+    T _value;
     bool hasValue;
 public:
     optional(T value);
     optional();
-    T get();
+    T value();
     void set(T value);
     bool has_value();
 

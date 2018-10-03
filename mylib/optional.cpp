@@ -19,9 +19,9 @@ bool optional<T>::has_value() {
 }
 
 template <class T>
-T optional<T>::get(){
+T optional<T>::value(){
     if(this->hasValue) {
-        return this->value;
+        return this->_value;
     } else {
         throw NoSuchElemException();
     }
@@ -30,12 +30,12 @@ T optional<T>::get(){
 template <class T>
 void optional<T>::set(T value){
     this->hasValue = true;
-    this->value = value;
+    this->_value = value;
 }
 
 template <class T>
 optional<T>::optional(T value) {
-    this->value = value;
+    this->_value = value;
     this->hasValue=true;
 }
 
