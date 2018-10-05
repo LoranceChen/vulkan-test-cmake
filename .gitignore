@@ -26,3 +26,6 @@ _CPack_Packages
 *.tar.Z
 *.tar.bz2
 *.tar.xz
+
+# compiled shader
+*.spv
